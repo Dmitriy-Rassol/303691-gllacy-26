@@ -80,14 +80,13 @@
         </div>
       </header>
   <main>
-    <div class="slider-content">
+    <section class="slider-content">
       <div class="product__slide" id="slide1">
         <b class="product__slide-title">Крем-брюле и пломбир с малиновым джемом</b>
         <a class="button button--slider" href="#">Давайте оба!</a>
       </div>
-    </div>
-
-    <div class="offers">
+    </section>
+    <section class="offers">
       <div class="offer-item offer-item--raspberry">
         <p class="offer-item__title">Малинка даром!</p>
         <p class="offer-item__content">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -98,8 +97,8 @@
         <p class="offer-item__content">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
         <a class="button button--offers button--chocolate" href="#">Хочу шоколадки!</a>
       </div>
-    </div>
-    <div class="products">
+    </section>
+    <section class="products">
       <div class="product-item  product-item--hit">
         <div class="product-item__wrapper">
           <a class="button button--product" href="#">Быстрый просмотр</a>
@@ -148,15 +147,15 @@
           </div>
         </div>
       </div>
-      </div>
-    <div class="shop-description">
+      </section>
+    <section class="shop-description">
       <p class="shop-description__title">Магазин Глейси &mdash; это онлайн и оффлайн магазин по продаже мороженого собственного производства на развес</p>
       <p class="shop-description__item  shop-description__ice-cream">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
       <p class="shop-description__item  shop-description__cow">Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
       <p class="shop-description__item  shop-description__leaf">Для приготовления мороженого используется настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</p>
       <p class="shop-description__item  shop-description__thermometer">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
-    </div>
-    <div class="info-block">
+    </section>
+    <section class="info-block">
       <div class="blog-news">
         <p class="blog-news__text">Новое в нашем блоге</p>
         <a class="blog-news__link" href="#">10 способов сервировки фруктовых щербетов <br> к столу</a>
@@ -171,12 +170,14 @@
           </form>
         </div>
       </div>
-    </div>
+    </section>
   </main>
   </div>
-  <div class="bottom-container">
-    <div class="map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651568!2d30.32089461614341!3d59.938794181876276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2sus!4v1479353114695" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <section class="contact-container">
+    <div class="contact-map">
+      <img src="img/map.png" width="1200" height="430" alt="Карта">
+      <div class="contact-pin">
+     </div>
       <div class="contacts">
         <div class="contacts__wrapper-1">
           <p class="contacts__text">Адрес главного офиса и <br> офлайн магазина:</p>
@@ -220,27 +221,26 @@
         <p class="main-footer__c-text">Сделано в <a class="main-footer__c-link" href="#">HTML Academy</a> &copy; 2016</p>
       </div>
     </footer>
-    <div class="page-overlay"></div>
-    <div class="popup">
-      <button class="popup__close" type="button"></button>
-      <p class="popup__title">Мы обязательно вам ответим!</p>
+    <div class="popup-feedback">
+      <button class="popup-feedback__close" type="button"></button>
+      <p class="popup-feedback__title">Мы обязательно вам ответим!</p>
       <form action="#" method="post">
-        <div class="popup__input-wrapper">
-          <input class="popup__input" type="text" name="name" id="popup-name" placeholder="Как вас зовут?">
-          <label class="popup__label" for="popup-name">Как вас зовут?</label>
+        <div class="popup-feedback__input-wrapper">
+          <input class="popup-feedback__input" type="text" name="name" id="popup-name" placeholder="Как вас зовут?">
+          <label class="popup-feedback__label visually-hidden" for="popup-name">Как вас зовут?</label>
         </div>
-        <div class="popup__input-wrapper">
-          <input class="popup__input" type="text" name="email" id="popup-email" placeholder="Ваша почта для ответа?">
-          <label class="popup__label" for="popup-email">Ваша почта для ответа?</label>
+        <div class="popup-feedback__input-wrapper">
+          <input class="popup-feedback__input" type="text" name="email" id="popup-email" placeholder="Ваша почта для ответа?">
+          <label class="popup-feedback__label visually-hidden" for="popup-email">Ваша почта для ответа?</label>
         </div>
-        <div class="popup__input-wrapper">
-          <textarea class="popup__textarea" placeholder="Напишите что-нибудь..." rows="4" id="textarea"></textarea>
-          <label class="popup__label" for="textarea">Напишите что-нибудь</label>
+        <div class="popup-feedback__input-wrapper">
+          <textarea class="popup-feedback__textarea" placeholder="Напишите что-нибудь..." rows="4" id="textarea"></textarea>
+          <label class="popup-feedback__label visually-hidden" for="textarea">Напишите что-нибудь</label>
         </div>
-        <button class="button button--popup" type="submit" value="send" >Отправить</button>
+        <button class="button button--popup-feedback" type="submit" value="send" >Отправить</button>
       </form>
     </div>
-  </div>
+  </section>
 </div>
 </body>
 </html>
