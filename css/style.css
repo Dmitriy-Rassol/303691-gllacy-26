@@ -923,7 +923,7 @@ margin-bottom: 17px;
   padding-bottom: 2px;
   background-image: url("../img/icon-heart.svg");
   background-repeat: no-repeat;
-  background-position: 0px 3px;
+  background-position: 0 3px;
   font-size: 13px;
   line-height: 18px;
 }
@@ -1187,7 +1187,7 @@ margin-bottom: 17px;
   height: 20px;
   background-color: rgb(248, 247, 244);
   border-radius: 50%;
-  box-shadow: 0 2px 2px 0px #9caaa1;
+  box-shadow: 0 2px 2px 0 #9caaa1;
 }
 .search-form__toggle:hover {
   cursor: pointer;
@@ -1311,23 +1311,19 @@ margin-bottom: 17px;
   border: 1px solid #fff;
   border-radius: 5px;
 }
-
 .search-form__checkbxs input[type="checkbox"] + label:hover::before {
   width: 16px;
   height: 16px;
   border: 2px solid #fff;
 }
-
 .search-form__checkbxs input[type="checkbox"]:disabled + label::before {
   opacity: 0.2;
 }
-
 .search-form__checkbxs input[type="checkbox"]:disabled + label:hover::before {
   width: 18px;
   height: 18px;
   border: 1px solid #fff;
 }
-
 .search-form__checkbxs input[type="checkbox"]:checked + label::before {
   content: "";
   position: absolute;
@@ -1337,21 +1333,18 @@ margin-bottom: 17px;
   background: url("../img/checkbox-checked.svg") no-repeat;
   border-style: none;
 }
-
 .search-form__checkbxs input[type="checkbox"]:checked + label:hover::before {
   border-style: none;
   width: 20px;
   height: 20px;
   background: url("../img/checkbox-checked-on.svg") no-repeat;
 }
-
 .search-form__checkbxs input[type="checkbox"]:disabled:checked + label:hover::before {
   width: 20px;
   height: 20px;
   background: url("../img/checkbox-checked.svg") no-repeat;
   border-style: none;
 }
-
 .btn-apply {
   width: 144px;
   height: 36px;
@@ -1366,16 +1359,14 @@ margin-bottom: 17px;
   font-weight: 500;
   cursor: pointer;
 }
-
 .btn-apply:hover {
   background-color: #fbfcfb;
   color: #323232;
 }
-
 .btn-apply:active {
   border-style: none;
   background-color: #eaeaea;
-  box-shadow: inset 0px 2px 2px #6c6d6c;
+  box-shadow: inset 0 2px 2px #6c6d6c;
 }
 .pages {
   width: 100%;
@@ -1384,7 +1375,6 @@ margin-bottom: 17px;
   text-align: right;
   font-size: 0;
 }
-
 .page-item {
   display: inline-block;
   width: 26px;
@@ -1398,20 +1388,16 @@ margin-bottom: 17px;
   color: #fff;
   text-decoration: none;
 }
-
 .page-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 .page-item:active {
   background-color: #fff;
   color: #323232;
 }
-
 .page-item:last-child {
   margin-right: 0;
 }
-
 .page-item--active {
   width: 26px;
   height: 26px;
@@ -1421,19 +1407,15 @@ margin-bottom: 17px;
   color: #323232;
   text-align: center;
 }
-
 .page-item--active:hover {
   background-color: #fff;
 }
-
 .page-item--disabled {
   color: rgba(255, 255, 255, 0.2);
 }
-
 .page-item--disabled:hover {
   background-color: #849d8f;
 }
-
 .line {
   width: 100%;
   height: 1px;
