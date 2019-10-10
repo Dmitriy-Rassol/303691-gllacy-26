@@ -8,6 +8,9 @@
     <title>Gllacy Shop</title>
 </head>
 <body>
+<input class="slider-input" type="radio" name="slider" value="picture-1" id="btn-1" checked>
+<input class="slider-input" type="radio" name="slider" value="picture-2" id="btn-2">
+<input class="slider-input" type="radio" name="slider" value="picture-3" id="btn-3">
 <div class="site-wrapper">
   <div class="content-wrapper">
       <header>
@@ -80,12 +83,27 @@
         </div>
       </header>
   <main>
-    <section class="slider-content">
-      <div class="product__slide" id="slide1">
-        <b class="product__slide-title">Крем-брюле и пломбир с малиновым джемом</b>
-        <a class="button button--slider" href="#">Давайте оба!</a>
+    <div class="slider">
+      <div class="slider-controls">
+        <label class="slider__label" for="btn-1"></label>
+        <label class="slider__label" for="btn-2"></label>
+        <label class="slider__label" for="btn-3"></label>
       </div>
-    </section>
+      <div class="slider-content">
+        <div class="product__slide" id="slide1">
+          <b class="product__slide-title">Крем-брюле и пломбир с малиновым джемом</b>
+          <a class="button button--slider" href="#">Давайте оба!</a>
+        </div>
+        <div class="product__slide" id="slide2">
+          <b class="product__slide-title">Шоколадный пломбир и лимонный сорбет</b>
+          <a class="button button--slider" href="#">Давайте оба!</a>
+        </div>
+        <div class="product__slide" id="slide3">
+          <b class="product__slide-title">Пломбир с помадкой и клубничный щербет</b>
+          <a class="button button--slider" href="#">Давайте оба!</a>
+        </div>
+      </div>
+    </div>
     <section class="offers">
       <div class="offer-item offer-item--raspberry">
         <p class="offer-item__title">Малинка даром!</p>
@@ -221,6 +239,7 @@
         <p class="main-footer__c-text">Сделано в <a class="main-footer__c-link" href="#">HTML Academy</a> &copy; 2016</p>
       </div>
     </footer>
+    <div class="page-overlay"></div>
     <div class="popup-feedback">
       <button class="popup-feedback__close" type="button"></button>
       <p class="popup-feedback__title">Мы обязательно вам ответим!</p>
@@ -240,7 +259,9 @@
         <button class="button button--popup-feedback" type="submit" value="send" >Отправить</button>
       </form>
     </div>
+
   </section>
 </div>
+<script src="js/script.js"></script>
 </body>
 </html>
