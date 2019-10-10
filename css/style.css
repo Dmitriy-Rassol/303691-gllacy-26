@@ -28,7 +28,7 @@ body {
   min-width: 1200px;
   padding-top: 8px;
   background: #849d8f url("../img/bg-slider-1.png") no-repeat 50% 0;
-  transition: all 0.5s ease;
+  transition:0.5s ease;
 }
 .site-wrapper-catalog {
   min-width: 1200px;
