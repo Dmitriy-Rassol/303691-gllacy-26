@@ -735,7 +735,7 @@ font-size: 35px;
 }
 .contact-container{
   width: 1200px;
-  margin: 40px auto;
+  margin: 40px auto auto;
 
 }
 .contact-map{
@@ -1504,4 +1504,28 @@ margin-bottom: 17px;
   background-color: #000;
   opacity: 0.3;
   z-index:30 ;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-48% ,-50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-52% ,-50%);
+  }
+}
+.modal-error{
+  animation: shake 0.6s;
 }
