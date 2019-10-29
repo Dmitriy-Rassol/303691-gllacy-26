@@ -1,4 +1,3 @@
-
 var btn = document.querySelector(".button--contacts");
 var popup = document.querySelector(".popup-feedback");
 var close = popup.querySelector(".popup-feedback__close");
@@ -10,50 +9,50 @@ var isStorageSupport = true;
 var storage = "";
 
 try {
-  storage = localStorage.getItem("login");
+    storage = localStorage.getItem("login");
 } catch (err) {
-  isStorageSupport = false;
+    isStorageSupport = false;
 }
 
-  btn.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("popup-show");
+btn.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("popup-show");
     if (storage) {
-      login.value = storage;
-      email.focus();
+        login.value = storage;
+        email.focus();
     } else {
-      login.focus();
+        login.focus();
     }
-  overlay.classList.add("page-overlay-show");
+    overlay.classList.add("page-overlay-show");
 });
-  close.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.remove("popup-show");
+close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("popup-show");
     popup.classList.remove("modal-error");
-  overlay.classList.remove("page-overlay-show");
+    overlay.classList.remove("page-overlay-show");
 });
 
-  formfeedback.addEventListener("submit", function (evt) {
-  if (!login.value || !email.value) {
-  evt.preventDefault();
-  popup.classList.remove("modal-error");
-  popup.offsetWidth = popup.offsetWidth;
-  popup.classList.add("modal-error");
-  console.log("Нужно ввести свои данные");
-  }else {
-    if (isStorageSupport) {
-      localStorage.setItem("login", login.value);
+formfeedback.addEventListener("submit", function (evt) {
+    if (!login.value || !email.value) {
+        evt.preventDefault();
+        popup.classList.remove("modal-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("modal-error");
+        console.log("Нужно ввести свои данные");
+    }else {
+        if (isStorageSupport) {
+            localStorage.setItem("login", login.value);
+        }
     }
-  }
 });
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    evt.preventDefault();
-    if (popup.classList.contains("popup-show")) {
-      popup.classList.remove("popup-show");
-      popup.classList.remove("modal-error");
-      overlay.classList.remove("page-overlay-show");
+    if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (popup.classList.contains("popup-show")) {
+            popup.classList.remove("popup-show");
+            popup.classList.remove("modal-error");
+            overlay.classList.remove("page-overlay-show");
+        }
     }
-  }
 });
