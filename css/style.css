@@ -1342,7 +1342,7 @@ background: rgba(255, 255, 255,0.2) url("../img/icon-cart.png") no-repeat 16px c
     border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 .breadcrumbs__item:not(:last-child)::after {
-   content:"Â»";
+   content:"\00bb	";
     position: absolute;
     top: 0;
     right: -14px;
@@ -1579,8 +1579,19 @@ background: rgba(255, 255, 255,0.2) url("../img/icon-cart.png") no-repeat 16px c
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: #e6ebe9;
     transform: translate(6px, 6px);
+}
+.search-form__radiobtns input[type="radio"]:checked + label:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: #fff;
+  transform: translate(6px, 6px);
 }
 .search-form__radiobtns input[type="radio"]:checked + label::before {
     content: "";
@@ -1589,8 +1600,18 @@ background: rgba(255, 255, 255,0.2) url("../img/icon-cart.png") no-repeat 16px c
     left: 0;
     width: 21px;
     height: 21px;
-    border: 3px solid #ffffff;
+    border: 3px solid #e6ebe9;
     border-radius: 50%;
+}
+.search-form__radiobtns input[type="radio"]:checked + label:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  border: 3px solid #fff;
+  border-radius: 50%;
 }
 
 .search-form__radiobtns input[type="radio"]:checked:disabled + label::after {
@@ -1631,51 +1652,61 @@ background: rgba(255, 255, 255,0.2) url("../img/icon-cart.png") no-repeat 16px c
     position: absolute;
     top: 0;
     left: 0;
-    width: 22px;
-    height: 22px;
-    border: 2px solid #fff;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e6ebe9;
     border-radius: 5px;
 }
-.search-form__checkbxas input[type="checkbox"] + label:hover::before {
-    width: 22px;
-    height: 22px;
-    border: 2px solid #fff;
+.search-form__checkbxs input[type="checkbox"] + label:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
 }
+
 .search-form__checkbxs input[type="checkbox"]:disabled + label::before {
     opacity: 0.2;
 }
 .search-form__checkbxs input[type="checkbox"]:disabled + label:hover::before {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     border: 2px solid #fff;
 }
 .search-form__checkbxs input[type="checkbox"]:checked + label::before {
     content: "";
     position: absolute;
     left: 0;
-    width: 22px;
-    height: 22px;
-    border: 2px solid #fff;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #e6ebe9;
 }
 .search-form__checkbxs input[type="checkbox"]:checked + label::after {
     content: "";
     position: absolute;
     height: 9px;
     width: 18px;
-    border-left: 4px solid;
-    border-bottom: 4px solid;
+    border-left: 4px solid #e6ebe9;
+    border-bottom: 4px solid #e6ebe9;
     transform: rotate(-45deg);
     left: 5px;
-    top: 4px;
+    top: 2px;
+}
+.search-form__checkbxs input[type="checkbox"]:checked + label:hover::after {
+  border-left: 4px solid #fff;
+  border-bottom: 4px solid #fff;
 }
 .search-form__checkbxs input[type="checkbox"]:checked + label:hover::before {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     border: 2px solid #fff;
 }
 .search-form__checkbxs input[type="checkbox"]:disabled:checked + label:hover::before {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     border: 2px solid #fff;
 
 }
@@ -1705,6 +1736,7 @@ background: rgba(255, 255, 255,0.2) url("../img/icon-cart.png") no-repeat 16px c
 }
 .section-product{
     margin-top: 40px;
+    margin-bottom: 36px;
 }
 .product__list{
     position: relative;
@@ -1719,7 +1751,7 @@ background: rgba(255, 255, 255,0.2) url("../img/icon-cart.png") no-repeat 16px c
     display: flex;
     flex-direction: column;
     width: 267px;
-    margin-bottom: 39px;
+    margin-bottom: 38px;
 }
 .catalog__item-product::after {
     content: "";
@@ -1744,7 +1776,16 @@ background: rgba(255, 255, 255,0.2) url("../img/icon-cart.png") no-repeat 16px c
 }
 /*nav-page*/
 .pagination{
-margin-top: 43px;
+  position: relative;
+  margin-top: 42px;
+}
+.pagination:after{
+  bottom: -31px;
+  content: '';
+  background:#a9bbb1;
+  position: absolute;
+  width: 1200px;
+  height: 2px;
 }
 .pagination-item-disabled a{
     cursor: default;
@@ -1794,31 +1835,21 @@ margin-top: 43px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 50%;
 }
-.pagination-item a:hover:last-child,
-.pagination-item a:focus:last-child,
-.pagination-item a:active:last-child {
-    background: none;
-}
-.pagination-item a:hover:first-child,
-.pagination-item a:focus:first-child,
-.pagination-item a:active:first-child {
-    background: none;
-}
+
 .pagination-item-current a {
-    color: #000000;
-    border-radius: 50%;
-    background-color: #ffffff;
+  color: #000000;
+  border-radius: 50%;
+  background-color: #ffffff;
 }
 
 .pagination-item-current a:hover,
 .pagination-item-current a:focus,
 .pagination-item-current a:active {
-    color: #000000;
-
-    background-color: #ffffff;
+  color: #000000;
+  background-color: #ffffff;
 }
 .pagination-prev a:hover, .pagination-next a:hover{
-    background: none;
+  background: none;
 }
 .pagination-item-disabled{
     opacity: .2;
