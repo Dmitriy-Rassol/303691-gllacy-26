@@ -2,11 +2,11 @@ var btn = document.querySelector(".button--contacts");
 var popup = document.querySelector(".popup-feedback");
 var close = popup.querySelector(".popup-feedback__close");
 var overlay = document.querySelector(".page-overlay");
-var formfeedback = popup.querySelector(".feedback-form");
+var form = popup.querySelector(".feedback-form");
 var login = popup.querySelector("[name=name]");
 var email = popup.querySelector("[name=email]");
 var isStorageSupport = true;
-var storage = "";
+var storage = '';
 
 try {
     storage = localStorage.getItem("login");
@@ -32,7 +32,7 @@ close.addEventListener("click", function (evt) {
     overlay.classList.remove("page-overlay-show");
 });
 
-formfeedback.addEventListener("submit", function (evt) {
+form.addEventListener("submit", function (evt) {
     if (!login.value || !email.value) {
         evt.preventDefault();
         popup.classList.remove("modal-error");

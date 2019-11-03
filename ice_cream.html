@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
-    <title>Gllacy Shop каталог</title>
+  <meta charset="UTF-8">
+  <title>Glacy Каталог</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <div class="site-wrapper-catalog">
@@ -14,9 +14,7 @@
       <div class="main-nav-wrapper">
         <nav class="main-nav">
           <ul class="main-nav__list">
-            <li>
-              <a class="logo" href="index.html"><img src="img/gllacy-logo.svg" alt="gllacy-logo" width="153" height="63">  </a>
-            </li>
+              <a class="logo" href="index.html"><img src="img/gllacy-logo.svg" alt="Логотип" width="153" height="63">  </a>
             <li class="main-nav__item main-nav__submenu-active">
               <div class="main-nav__link-wrapper main-nav__link-wrapper--active">
                 <a class="main-nav__link" href="#">Каталог</a>
@@ -51,30 +49,26 @@
               </div>
             </li>
             <li class="user-nav__item user-nav__login">
-              <a class="user-nav__link  user-nav__login-link" href="#">Вход</a>
-              <form class="user-nav__login-popup clearfix" action="#" method="post">
-                <div class="user-nav__login-wrapper">
-                  <input type="text" name="email" placeholder="Электронная почта" id="e-mail">
-                  <label class="user-nav__login-label visually-hidden" for="e-mail">Электронная почта</label>
-                </div>
-                <div class="user-nav__login-wrapper">
-                  <input type="password" name="password" placeholder="Пароль" id="password">
-                  <label class="user-nav__login-label visually-hidden" for="password">Пароль</label>
-                </div>
-                <div class="button-login-block">
-                  <button class="button button-popup" type="submit" value="login">Войти</button>
-                <div class="user-nav__text-wrapper">
-                  <a class="user-nav__text" href="#">Забыли пароль?</a>
-                  <a class="user-nav__text" href="#">Новая регистрация</a>
-                </div>
+              <a class="user-nav__link  user-nav__login-link" href="#" title="Авторизация пользователя" >Вход</a>
+              <form class="user-nav__login-popup clearfix form-enter" action="https://echo.htmlacademy.ru" method="post">
+                <input class="email-popup" type="text" name="email" placeholder="Электронная почта" id="e-mail">
+                <label class="user-nav__login-label visually-hidden" for="e-mail">Электронная почта</label>
+                <input type="password" name="password" placeholder="Пароль" id="password">
+                <label class="user-nav__login-label visually-hidden" for="password">Пароль</label>
+                <div class="user-nav__login-buttons">
+                  <button class="button button-sign" type="submit">Войти</button>
+                  <ul class="user-nav__text-wrapper">
+                    <li><a class="user-nav__text" href="#">Забыли пароль?</a></li>
+                    <li><a class="user-nav__text" href="#">Новая регистрация</a></li>
+                  </ul>
                 </div>
               </form>
             </li>
             <li class="user-nav__item user-nav__cart-full">
-              <a class="user-nav__link user-nav__cart-red" href="#">2 товара</a>
+              <a class="user-nav__link user-nav__cart-red" href="#" title="Корзина товаров">2 товара</a>
               <div class="user-nav__cart-popup">
                 <div class="user-nav__cart-row">
-                  <div class="user-nav__cart-delete"></div>
+                  <button class="user-nav__cart-delete" type="submit"></button>
                   <div class="user-nav__cart-product-image user-nav__cart-product-image-orange"></div>
                   <span class="user-nav__cart-title">Пломбир с апельсиновым джемом</span>
                   <span class="user-nav__cart-text-wrapper">
@@ -84,7 +78,7 @@
                   <span class="user-nav__cart-price">300 руб</span>
                 </div>
                 <div class="user-nav__cart-row">
-                  <div class="user-nav__cart-delete"></div>
+                  <button class="user-nav__cart-delete" type="submit"></button>
                   <div class="user-nav__cart-product-image user-nav__cart-product-image-strawberry"></div>
                   <span class="user-nav__cart-title">Клубничный пломбир с присыпкой из белого шоколада</span>
                   <span class="user-nav__cart-text-wrapper">
@@ -102,8 +96,8 @@
         </div>
       </div>
       <div class="shop-info">
-        <span class="shop-info__hours">С 10 до 20, ежедневно</span>
-        <span class="shop-info__phone">8 812 450-25-25</span>
+        <p class="shop-info__hours" title="Работаем с 10 до 20, ежедневно">С 10 до 20, ежедневно</p>
+        <a class="shop-info__phone" href="tel:88124502525" title="Позвоните нам">8 812 450-25-25</a>
       </div>
       <div class="breadcrumbs">
       <a class="breadcrumbs__item" href="#">Главная</a>
@@ -117,53 +111,51 @@
       <div class="search-form__select">
         <p class="search-form__title-sort">Сортировка:</p>
         <div class="search-form__select-wrapper">
-          <label title="Сортировка">
-            <select>
+            <label class="visually-hidden" for="filters-sorting">Сортировка:</label>
+            <select name="filters-sorting" id="filters-sorting" tabindex="0">
               <option value="popularity">по популярности</option>
               <option value="cheap-first">сначала недорогие</option>
               <option value="expensive-first">сначала дорогие</option>
               <option value="fat">по жирности</option>
             </select>
-          </label>
-          <div class="search-form__select-arrow"></div>
         </div>
       </div>
-      <div class="search-form-price">
+      <div class="search-form-price-container">
         <p class="search-form__title-price">Цена: 100 руб. &mdash; 500 руб.</p>
         <div class="search-form__price-wrapper">
           <div class="search-form__controls">
-            <div class="search-form__toggle search-form__toggle--left"></div>
+            <div class="search-form__toggle search-form__toggle--left" tabindex="0"></div>
             <div class="search-form__controls-active"></div>
-            <div class="search-form__toggle  search-form__toggle--right"></div>
+            <div class="search-form__toggle  search-form__toggle--right" tabindex="0"></div>
           </div>
         </div>
       </div>
-      <div class="search-form__fat">
+      <div class="search-form__fat-container">
         <p class="search-form__title-fat-content">Жирность:</p>
-        <div class="search-form__radiobtns">
+        <div class="search-form__fat">
           <input class="search-form__radio" type="radio" name="fat" value="0%" id="zero-percent">
-          <label class="search-form__radio-label" for="zero-percent">0%</label>
+          <label class="search-form__radio-label" for="zero-percent" tabindex="0">0%</label>
           <input class="search-form__radio" type="radio" name="fat" value="up-to-ten" id="up-to-ten" checked>
-          <label class="search-form__radio-label" for="up-to-ten">до 10%</label>
+          <label class="search-form__radio-label" for="up-to-ten" tabindex="0">до 10%</label>
           <input class="search-form__radio" type="radio" name="fat" value="up-to-thirty" id="up-to-thirty" disabled>
-          <label class="search-form__radio-label" for="up-to-thirty">до 30%</label>
+          <label class="search-form__radio-label" for="up-to-thirty" tabindex="0">до 30%</label>
           <input class="search-form__radio" type="radio" name="fat" value="more-than-thirty" id="more-than-thirty">
-          <label class="search-form__radio-label" for="more-than-thirty">выше 30%</label>
+          <label class="search-form__radio-label" for="more-than-thirty" tabindex="0">выше 30%</label>
         </div>
       </div>
-      <div class="search-form__flavors">
+      <div class="search-form__flavors-container">
         <p class="search-form__title-check">Наполнители</p>
-        <div class="search-form__checkbxs">
+        <div class="search-form__flavors">
           <input class="search-form__checkbox" type="checkbox" name="chocolate" id="chocolate" checked>
-          <label class="search-form__checkbox-label" for="chocolate">шоколадные</label>
+          <label class="search-form__checkbox-label" for="chocolate" tabindex="0">шоколадные</label>
           <input class="search-form__checkbox" type="checkbox" name="sugar" id="sugar" checked>
-          <label class="search-form__checkbox-label" for="sugar" >сахарные присыпки</label>
+          <label class="search-form__checkbox-label" for="sugar"tabindex="0" >сахарные присыпки</label>
           <input class="search-form__checkbox" type="checkbox" name="fruit" id="fruit">
-          <label class="search-form__checkbox-label" for="fruit">фрукты</label>
+          <label class="search-form__checkbox-label" for="fruit" tabindex="0">фрукты</label>
           <input class="search-form__checkbox" type="checkbox" name="syrop" id="syrop" disabled>
-          <label class="search-form__checkbox-label" for="syrop">сиропы</label>
-          <input class="search-form__checkbox" type="checkbox" name="jam" id="jam">
-          <label class="search-form__checkbox-label" for="jam">джемы</label>
+          <label class="search-form__checkbox-label" for="syrop" tabindex="0">сиропы</label>
+          <input class="search-form__checkbox" type="checkbox" name="jam" id="jam" >
+          <label class="search-form__checkbox-label" for="jam" tabindex="0">джемы</label>
         </div>
       </div>
       <button class="btn-apply" type="submit">Применить</button>
@@ -309,34 +301,29 @@
   </main>
   </div>
   <footer class="main-footer content-wrapper">
-    <h2 class="visually-hidden">Вы можете найти нас в соцсетях:</h2>
-    <div class="main-footer-social">
-      <ul class="social">
-        <li class="social-list-item"><a class="social__item social__item--twitter" href="#" title="Твиттер"><h3 class="visually-hidden">Твиттер</h3></a></li>
-        <li class="social-list-item"><a class="social__item social__item--instagram" href="#" title="Инстаграм"><h3 class="visually-hidden">Инстаграм</h3></a></li>
-        <li class="social-list-item"><a class="social__item social__item--facebook" href="#" title="Фейсбук"><h3 class="visually-hidden">Фейсбук</h3></a></li>
-        <li class="social-list-item"><a class="social__item social__item--vk" href="#" title="Вконтакте"><h3 class="visually-hidden">Вконтакте</h3></a></li>
+    <div class="footer-block">
+      <ul class="footer-social-contacts">
+        <li><a href="#" class="footer-social-twitter"><span class="visually-hidden">Твиттер</span></a></li>
+        <li><a href="#" class="footer-social-instagram"><span class="visually-hidden">Инстаграм</span></a></li>
+        <li><a href="#" class="footer-social-facebook"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li><a href="#" class="footer-social-vk"><span class="visually-hidden">Вконтакте</span></a></li>
       </ul>
-    </div>
-    <div class="main-footer__suppliers">
-      <ul class="main-footer__suppliers-wrapper">
-        <li class="main-footer__text-wrapper">
-          <a class="main-footer__text main-footer__text--heart" href="#">Для поставщиков</a>
-        </li>
-        <li class="main-footer__text-wrapper">
-          <a class="main-footer__text" href="#">Наши документы</a>
-        </li>
-        <li class="main-footer__text-wrapper">
-          <a class="main-footer__text" href="#">О производстве</a>
-        </li>
-        <li class="main-footer__text-wrapper">
-          <a class="main-footer__text" href="#">Экологические стандарты</a>
-        </li>
+      <ul class="footer-navigation">
+        <li class="footer-navigation-provider"><a href="#" class="footer-links-item">Для поставщиков</a></li>
+        <li><a href="#" class="footer-links-item">Наши документы</a></li>
+        <li><a href="#" class="footer-links-item">О производстве</a></li>
+        <li><a href="#" class="footer-links-item">Экологические стандарты</a></li>
       </ul>
-    </div>
-    <div class="main-footer__copyright">
-      <a class="htmlacademy-logo" href="#"><img src="img/htmlacademy-logo.svg" alt="htmlacademy-logo" width="108" height="37"></a>
-      <p class="main-footer__c-text">Сделано в <a class="main-footer__c-link" href="#">HTML Academy</a> &copy; 2016</p>
+      <div class="footer-copyright">
+        <p>
+          <img src="img/htmlacademy-logo.svg" alt="Логотип HTML Academy" width="108" height="40">
+        </p>
+        <p>
+          Сделано в
+          <a href="https://htmlacademy.ru/intensive/htmlcss" class="footer-copyright-link" target="_blank">HTML Academy</a>
+          © 2019
+        </p>
+      </div>
     </div>
   </footer>
   </div>

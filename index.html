@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Glacy</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i&amp;subset=cyrillic" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Glacy</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 <input class="slider-input" type="radio" name="slider" value="picture-1" id="btn-1" checked>
@@ -16,9 +16,7 @@
             <div class="main-nav-wrapper">
                 <nav class="main-nav">
                     <ul class="main-nav__list">
-                        <li>
-                            <a class="logo" href="index.html"><img src="img/gllacy-logo.svg" alt="gllacy-logo" width="154" height="64">  </a>
-                        </li>
+                      <img class="logo" src="img/gllacy-logo.svg" alt="Логотип" width="154" height="64">
                         <li class="main-nav__item main-nav__submenu-active">
                             <a class="main-nav__link" href="#">Каталог</a>
                             <ul class="main-nav__submenu">
@@ -53,11 +51,13 @@
                                 <label class="user-nav__login-label visually-hidden" for="e-mail">Электронная почта</label>
                                 <input type="password" name="password" placeholder="Пароль" id="password">
                                 <label class="user-nav__login-label visually-hidden" for="password">Пароль</label>
-                                <button class="button button-popup" type="submit">Войти</button>
-                                <div class="user-nav__text-wrapper">
-                                    <a class="user-nav__text" href="#">Забыли пароль?</a>
-                                    <a class="user-nav__text" href="#">Новая регистрация</a>
-                                </div>
+                              <div class="user-nav__login-buttons">
+                              <button class="button button-sign" type="submit">Войти</button>
+                                <ul class="user-nav__text-wrapper">
+                                    <li><a class="user-nav__text" href="#">Забыли пароль?</a></li>
+                                    <li><a class="user-nav__text" href="#">Новая регистрация</a></li>
+                                </ul>
+                              </div>
                             </form>
                         </li>
                         <li class="user-nav__item">
@@ -67,16 +67,16 @@
                 </div>
             </div>
             <div class="shop-info">
-                <p class="shop-info__hours" title="с 10 до 20, ежедневно">С 10 до 20, ежедневно</p>
-                <a class="shop-info__phone" href="tel:88124502525">8 812 450-25-25</a>
+                <p class="shop-info__hours" title="Работаем с 10 до 20, ежедневно">С 10 до 20, ежедневно</p>
+                <a class="shop-info__phone" href="tel:88124502525" title="Позвоните нам">8 812 450-25-25</a>
             </div>
         </header>
         <main>
             <div class="slider content-wrapper">
                 <div class="slider-controls">
-                    <label class="slider__label" for="btn-1"></label>
-                    <label class="slider__label" for="btn-2"></label>
-                    <label class="slider__label" for="btn-3"></label>
+                    <label class="slider__label" for="btn-1" tabindex="0"></label>
+                    <label class="slider__label" for="btn-2" tabindex="0"></label>
+                    <label class="slider__label" for="btn-3" tabindex="0"></label>
                 </div>
                 <div class="slider-content">
                     <div class="product__slide" id="slide1">
@@ -125,7 +125,7 @@
                                 </div>
                                 <p class="catalog__item-price">310<span class="rouble">₽</span><span class="catalog__item-kg">/кг</span></p>
                                 <h3 class="catalog__item-title"><a href="#" title="Сливочное с апельсиновым джемом и цитрусовой стружкой">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
-                                <a class="button button-hit" href="">Быстрый просмотр</a>
+                                <a class="button button-hit" href=''>Быстрый просмотр</a>
                             </div>
                         </li>
                         <li class="catalog__item">
@@ -135,7 +135,7 @@
                                 </div>
                                 <p class="catalog__item-price">380<span class="rouble">₽</span><span class="catalog__item-kg">/кг</span></p>
                                 <h3 class="catalog__item-title"><a href="#" title="Сливочно-кофейное с кусочками шоколада">Сливочно-кофейное с кусочками шоколада</a></h3>
-                                <a class="button button-hit" href="">Быстрый просмотр</a>
+                                <a class="button button-hit" href=''>Быстрый просмотр</a>
                             </div>
                         </li>
                         <li class="catalog__item">
@@ -145,7 +145,7 @@
                                 </div>
                                 <p class="catalog__item-price">355<span class="rouble">₽</span><span class="catalog__item-kg">/кг</span></p>
                                 <h3 class="catalog__item-title"><a href="#" title="Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
-                                <a class="button button-hit" href="">Быстрый просмотр</a>
+                                <a class="button button-hit" href=''>Быстрый просмотр</a>
                             </div>
                         </li>
                         <li class="catalog__item">
@@ -154,8 +154,8 @@
                                     <img src="img/ice-cream-caramel.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
                                 </div>
                                 <p class="catalog__item-price">415<span class="rouble">₽</span><span class="catalog__item-kg">/кг</span></p>
-                                <h3 class="catalog__item-title"><a href="#" title="">Сливочное крем-брюле с карамельной подливкой</a></h3>
-                                <a class="button button-hit" href="">Быстрый просмотр</a>
+                                <h3 class="catalog__item-title"><a href="#" title=''>Сливочное крем-брюле с карамельной подливкой</a></h3>
+                                <a class="button button-hit" href=''>Быстрый просмотр</a>
                             </div>
                         </li>
                     </ul>
@@ -185,7 +185,7 @@
                 <h2 class="visually-hidden">Новости</h2>
                 <div class="blog-news">
                     <p class="blog-news__text">Новое в нашем блоге</p>
-                    <a class="blog-news__link" href="#">10 способов сервировки фруктовых щербетов к<br>  столу</a>
+                    <a class="blog-news__link" href="#">10 способов сервировки фруктовых щербетов к  столу</a>
                 </div>
                 <div class="news-subscription__wrapper">
                     <div class="news-subscription">
@@ -205,13 +205,13 @@
                     <div class="contact-inner">
                         <div class="contacts">
                             <div class="contacts__wrapper-1">
-                                <p class="contacts__text">Адрес главного офиса  <br>и офлайн магазина:</p>
-                                <p class="contacts__info">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+                                <p class="contacts__text-adress">Адрес главного офиса и офлайн магазина:</p>
+                                <p class="contacts__info-street">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
                             </div>
                             <div class="contacts__wrapper-2">
-                                <p class="contacts__text contacts-phone">Для заказов по телефону:</p>
-                                <a class="contacts__info " href="tel:88124502525">8 812 450-25-25</a>
-                                <p class="contacts__text contacts-clock">(с 10 до 20 ежедневно)</p>
+                                <p class="contacts__text-phone">Для заказов по телефону:</p>
+                                <a class="contacts__info-phone " href="tel:88124502525">8 812 450-25-25</a>
+                                <p class="contacts__text-clock">(с 10 до 20 ежедневно)</p>
                             </div>
                             <a class="button button--contacts" href="#">Форма обратной связи</a>
                         </div>
@@ -219,37 +219,32 @@
                 </div>
             </section>
         </main>
-    <footer class="main-footer content-wrapper">
-        <h2 class="visually-hidden">Вы можете найти нас в соцсетях:</h2>
-        <div class="main-footer-social">
-            <ul class="social">
-                <li class="social-list-item"><a class="social__item social__item--twitter" href="#" title="Твиттер"><h3 class="visually-hidden">Твиттер</h3></a></li>
-                <li class="social-list-item"><a class="social__item social__item--instagram" href="#" title="Инстаграм"><h3 class="visually-hidden">Инстаграм</h3></a></li>
-                <li class="social-list-item"><a class="social__item social__item--facebook" href="#" title="Фейсбук"><h3 class="visually-hidden">Фейсбук</h3></a></li>
-                <li class="social-list-item"><a class="social__item social__item--vk" href="#" title="Вконтакте"><h3 class="visually-hidden">Вконтакте</h3></a></li>
-            </ul>
-        </div>
-        <div class="main-footer__suppliers">
-            <ul class="main-footer__suppliers-wrapper">
-                <li class="main-footer__text-wrapper">
-                    <a class="main-footer__text main-footer__text--heart" href="#">Для поставщиков</a>
-                </li>
-                <li class="main-footer__text-wrapper">
-                    <a class="main-footer__text" href="#">Наши документы</a>
-                </li>
-                <li class="main-footer__text-wrapper">
-                    <a class="main-footer__text" href="#">О производстве</a>
-                </li>
-                <li class="main-footer__text-wrapper">
-                    <a class="main-footer__text" href="#">Экологические стандарты</a>
-                </li>
-            </ul>
-        </div>
-        <div class="main-footer__copyright">
-            <a class="htmlacademy-logo" href="#"><img src="img/htmlacademy-logo.svg" alt="htmlacademy-logo" width="108" height="37"></a>
-            <p class="main-footer__c-text">Сделано в <a class="main-footer__c-link" href="#">HTML Academy</a> &copy; 2016</p>
-        </div>
-    </footer>
+  <footer class="main-footer content-wrapper">
+    <div class="footer-block">
+      <ul class="footer-social-contacts">
+        <li><a href="#" class="footer-social-twitter"><span class="visually-hidden">Твиттер</span></a></li>
+        <li><a href="#" class="footer-social-instagram"><span class="visually-hidden">Инстаграм</span></a></li>
+        <li><a href="#" class="footer-social-facebook"><span class="visually-hidden">Фейсбук</span></a></li>
+        <li><a href="#" class="footer-social-vk"><span class="visually-hidden">Вконтакте</span></a></li>
+      </ul>
+      <ul class="footer-navigation">
+        <li class="footer-navigation-provider"><a href="#" class="footer-links-item">Для поставщиков</a></li>
+        <li><a href="#" class="footer-links-item">Наши документы</a></li>
+        <li><a href="#" class="footer-links-item">О производстве</a></li>
+        <li><a href="#" class="footer-links-item">Экологические стандарты</a></li>
+      </ul>
+      <div class="footer-copyright">
+        <p>
+          <img src="img/htmlacademy-logo.svg" alt="Логотип HTML Academy" width="108" height="40">
+        </p>
+        <p>
+          Сделано в
+          <a href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">HTML Academy</a>
+          © 2019
+        </p>
+      </div>
+    </div>
+  </footer>
 </div>
 <div class="page-overlay"></div>
 <div class="popup-feedback ">
@@ -272,6 +267,6 @@
         <button class="button button--popup-feedback" type="submit">Отправить</button>
     </form>
 </div>
-<script src="js/script.js"></script>
+<script src="js/script.min.js"></script>
 </body>
 </html>
