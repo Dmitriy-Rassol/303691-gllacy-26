@@ -1,4 +1,4 @@
-# Личный проект «Глейси»
+# [Личный проект «Глейси»](https://dmitriy-rassol.github.io/303691-gllacy-26/)
 
 * Студент: [Дима Рассоленко](https://up.htmlacademy.ru/htmlcss/26/user/303691).
 * Наставник: [Роман Марченко](https://htmlacademy.ru/profile/id505487).
